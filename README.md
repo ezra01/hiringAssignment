@@ -1,6 +1,7 @@
 # TwotterPages
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+The project is temporarily production live @ https://twotter.pages.dev
 
 ## Development server
 
