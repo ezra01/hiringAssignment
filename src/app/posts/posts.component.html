@@ -1,0 +1,24 @@
+<div>
+    <input id="new-username" placeholder="Username" #username/><br>
+    <textarea id="new-post" placeholder="What's going on?" rows="4" cols="50" #content></textarea>
+    <br>
+    <input id="new-image" placeholder="Image URL"#pic/>
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="addPost(username.value,content.value,pic.value); content.value='';username.value='';content.value='';pic.value='';getPosts();">
+      Share twot
+    </button>
+  </div>
+<ul class="feed">
+    <li *ngFor="let post of posts">
+        <div class= "post-container">
+            <div>
+                <span class = "post-username">{{post.username}}</span>
+                &nbsp;
+                <span class = "post-date">{{post.date}}</span>
+            </div>
+            <div class = "post-content" ><span>{{post.content}}</span></div>
+            <div class = "post-pic" ><img src ={{post.pic}} ></div>
+        </div>
+    </li>
+</ul>
